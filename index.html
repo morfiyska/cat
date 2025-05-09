@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Потерялся кот Сиф</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background-color: #fff;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #d9534f;
+      text-align: center;
+    }
+    .photos, .more-photos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .photos img, .more-photos img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    .info {
+      margin-top: 20px;
+    }
+    .info p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    .contact {
+      font-weight: bold;
+      font-size: 20px;
+      color: #0275d8;
+      text-align: center;
+      margin-top: 20px;
+    }
+	.copy-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #0275d8;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .copy-btn:hover {
+      background-color: #025aa5;
+    }
+    .more-photos-title {
+      text-align: center;
+      font-weight: bold;
+      margin: 30px 0 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Потерялся кот</h1>
+    <div class="photos">
+      <img src="photos/cat1.jpg" alt="Кот Сиф фото 1">
+      <img src="photos/cat (2).jpg" alt="Кот Сиф фото 2">
+    </div>
+    <div class="info">
+      <p><strong>Кличка:</strong> Сиф</p>
+      <p><strong>Окрас:</strong> Дымчато-серый в полоску</p>
+      <p><strong>Особые приметы:</strong> На задней лапке белые пальцы</p>
+    </div>
+	<div class="contact">
+      Владелец: Вячеслав<br>
+      Телефон: <span id="phone">8 951 426 48 94</span><br>
+      <button class="copy-btn" onclick="copyPhone()">Скопировать номер</button>
+    </div>
+
+    <div class="more-photos-title">Дополнительные фотографии:</div>
+    <div class="more-photos">
+      <img src="photos/cat (3).jpg" alt="Фото 3">
+      <img src="photos/cat (4).jpg" alt="Фото 4">
+      <img src="photos/cat (5).jpg" alt="Фото 5">
+      <img src="photos/cat (6).jpg" alt="Фото 6">
+      <img src="photos/cat (7).jpg" alt="Фото 7">
+      <img src="photos/cat (8).jpg" alt="Фото 8">
+      <img src="photos/cat (9).jpg" alt="Фото 9">
+      <img src="photos/cat (10).jpg" alt="Фото 10">
+      <img src="photos/cat (11).jpg" alt="Фото 11">
+      <img src="photos/cat (12).jpg" alt="Фото 12">
+    </div>
+  </div>
+    <script>
+		function copyPhone() {
+		  const phone = document.getElementById('phone').innerText.replace(/\s/g, '');
+		  navigator.clipboard.writeText(phone)
+			.then(() => alert('Номер скопирован в буфер обмена!'))
+			.catch(() => alert('Не удалось скопировать номер.'));
+		}
+	</script>
+</body>
+</html>
