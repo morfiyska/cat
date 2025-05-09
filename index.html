@@ -108,7 +108,6 @@
 		function copyPhone() {
 		  const phone = document.getElementById('phone').innerText.replace(/\s/g, '');
 		  navigator.clipboard.writeText(phone)
-			.then(() => alert('Номер скопирован в буфер обмена!'))
 			.catch(() => alert('Не удалось скопировать номер.'));
 		}
 	</script>
